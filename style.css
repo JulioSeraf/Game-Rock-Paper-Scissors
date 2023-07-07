@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+/* ## Colors */
+
+/* ### Primary */
+
+--ScissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+--PaperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+--RockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+--LizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+--Cyan:hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+/* ### Neutral */
+
+--DarkText: hsl(229, 25%, 31%);
+--ScoreText: hsl(229, 64%, 46%);
+--HeaderOutline: hsl(217, 16%, 45%);
+
+/* ### Background */
+
+--RadialGradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+}
+
+body{
+    background-image:linear-gradient(to bottom,hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}   
+header{
+    flex-basis: 20%;
+    display: flex;
+}
+header .infoHeader{
+    border: 3px solid  hsl(217, 16%, 45%) ;
+    border-radius: 5px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.infoHeader .infoName{
+    padding: 5px;
+    flex-basis: 50%;
+    font-weight: bold;
+}
+.infoHeader .infoScore{
+    width: 40%;
+    background-color: white;
+    border-radius:5px;
+    text-align: center;
+}
+.infoHeader .infoScore p{
+    margin-top: 5px;
+    font-size: 0.8em;
+    color:hsl(229, 64%, 46%);
+}
+.infoScore .numberResult{
+    font-size: 2em;
+    font-weight: bolder;
+    color:hsl(229, 25%, 31%);
+}
+main{
+    flex-basis: 60%;
+}
+footer{
+    flex-basis: 20%;
+}
