@@ -16,9 +16,10 @@
   <header>
     <div class="infoHeader">
       <div class="infoName">
-        <p>ROCK</p>
+        <img src="images/logo.svg" alt="logo">
+        <!-- <p>ROCK</p>
         <p>PAPER</p>
-        <p>SCISSORS</p>
+        <p>SCISSORS</p> -->
       </div>
       <div class="infoScore">
         <p>SCORE</p>
@@ -28,17 +29,23 @@
   </header>
   <main>
     <div class="selectHand">
-      <div class="handPaper but-div"><div class="inside"><i class="fa fa-hand-rock-o" aria-hidden="true"></i></div></div>
+      <div class="handPaper but-div"><div class="inside"><p><img src="images/icon-paper.svg" alt=""></p></div></div>
       <div class="line"></div>
-      <div class="handSciss but-div"><div class="inside"></div></div>
+      <div class="handSciss but-div"><div class="inside"><p><img src="images/icon-scissors.svg" alt=""></p></div></div>
       <div class="line"></div>
-      <div class="handRock but-div"><div class="inside"></div></div>
+      <div class="handRock but-div"><div class="inside"><p><img src="images/icon-rock.svg" alt=""></p></div></div>
       <div class="line"></div>
     </div>
     <div class="result">
-
+      <div class="yourPicked"></div>
+      <div class="theHouse"></div>
+      <div class="gameRes">
+        <p class="lose">YOU LOSE</p>
+        <p class="win">YOU WIN</p>
+        <button id="butAgain">PLAY AGAIN</button>
+      </div>
     </div>
-
+    <div class="rules"><img src="" alt=""></div>
   </main>
   <footer>
     <div class="div__butRules">
