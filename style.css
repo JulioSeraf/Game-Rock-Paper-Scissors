@@ -110,6 +110,9 @@ main{
     width:80%;
     height: 80%;
 } 
+.inside:focus{
+    
+}
 .inside div{
     margin: auto;
     color: black;
@@ -178,10 +181,30 @@ main{
     border-radius: 50%;
     background-color: hsla(214, 67%, 17%, 0.701) ;
 }
-.hands .yourPicked{
+.result .hands .but-select{
+    display: flex;
+    width: 60%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: hsl(230, 89%, 65%);
+    box-shadow:  inset 0px -6px 0px hsl(230, 85%, 60%);
+
 }
-.hands .theHouse{
+.but-select > .insideRes{
+    display: flex;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    margin: auto;
+    background-color: white;
+    box-shadow: inset 0px 5px 2px rgba(0, 0, 0, 0.167);
+
 }
+.insideRes > img{
+    width: 50%;
+    margin: auto;
+}
+
 .hands p {
     margin: 20px 0;
 }
@@ -204,6 +227,7 @@ main{
     border-radius: 10px;
     border: none;
     width: 70%;
+    
 }
 /* RULES------------------------------------------------------------------------------*/
 .rules{
