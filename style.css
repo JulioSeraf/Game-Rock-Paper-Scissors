@@ -162,27 +162,28 @@ main{
 }
 .result .hands{
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    width: 100%;
     flex-grow: 5;
 }
+.result .hands> div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+}
 .result .hands .but-div{
-    position: absolute;
-    width: 40%;
-    height: 20%;
+    width: 45%;
+    height: 30%;
     border-radius: 50%;
-    background-color: gray;
+    background-color: hsla(214, 67%, 17%, 0.701) ;
 }
 .hands .yourPicked{
-    top: 30%;
-    left: 5%;
 }
 .hands .theHouse{
-    top: 30%;
-    right: 5%;
 }
 .hands p {
-    display: inline-block;
+    margin: 20px 0;
 }
 .result .gameRes{
     display:flex;
@@ -204,7 +205,7 @@ main{
     border: none;
     width: 70%;
 }
-/* RULES---------------------------------------------- */
+/* RULES------------------------------------------------------------------------------*/
 .rules{
     display: none;
     position: absolute;
