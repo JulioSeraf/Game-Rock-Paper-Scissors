@@ -23,12 +23,13 @@
       </div>
       <div class="infoScore">
         <p>SCORE</p>
-        <div class="numberResult">12</div>
+        <div class="numberResult">00</div>
       </div>
     </div>
   </header>
   <main>
-    <div class="selectHand">
+    <div class="selectHand" >
+      <img id="triangle" src="images/bg-triangle.svg" alt="bg-triangle">
       <div class="handPaper but-div">
         <div class="inside">
           <div>
@@ -36,15 +37,12 @@
           </div>
         </div>
       </div>
-      <div class="line"></div>
       <div class="handSciss but-div">
         <div class="inside">
           <div>
             <img src="images/icon-scissors.svg" alt="icon-scissors">
           </div>
         </div>
-      </div>
-      <div class="line">
       </div>
       <div class="handRock but-div">
         <div class="inside">
@@ -53,20 +51,31 @@
           </div>
         </div>
       </div>
-      <div class="line"></div>
     </div>
+    <!-- result--------------------------------------------------------------- -->
     <div class="result">
-      <div class="yourPicked but-div">
-      </div>
-      <div class="theHouse but-div">
+      <div class="hands">
+        <div>
+          <div class="yourPicked but-div">
+          </div>
+           <p>YOU PICKED</p>
+        </div>
+        <div>
+          <div class="theHouse but-div">
+          </div>
+          <P>THE HOUSE PICKED</P>
+        </div>
       </div>
       <div class="gameRes">
-        <p class="lose">YOU LOSE</p>
-        <p class="win">YOU WIN</p>
+        <h1 class="res">YOU LOSE</h1>
         <button id="butAgain">PLAY AGAIN</button>
       </div>
     </div>
-    <div class="rules"><img src="" alt=""></div>
+    <div class="rules">
+      <h1>RULES</h1>
+      <img id="rulesImg" src="images/image-rules.svg" alt="rules">
+      <button id="close-but"><img id="close" src="images/icon-close.svg" alt="icon-close"></button>
+    </div>
   </main>
   <footer>
     <div class="div__butRules">

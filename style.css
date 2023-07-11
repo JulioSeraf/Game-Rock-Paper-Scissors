@@ -2,8 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
-  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 :root{
 /* ## Colors */
 
@@ -32,7 +33,6 @@ body{
     display: flex;
     flex-direction: column;
     color: white;
-    font-family: 'Barlow Semi Condensed', sans-serif;
 }   
 header{
     flex-basis: 20%;
@@ -63,13 +63,22 @@ header .infoHeader{
     font-size: 0.8em;
     color:hsl(229, 64%, 46%);
 }
-main{
-    flex-basis: 60%;
-}
+
 .infoScore .numberResult{
     font-size: 2em;
     font-weight: bolder;
     color:hsl(229, 25%, 31%);
+}
+main{
+    flex-basis: 60%;
+}
+.selectHand #triangle{
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    top: 33%;
+
 }
 .selectHand{
     position: relative;
@@ -90,7 +99,7 @@ main{
     cursor: pointer;
     box-shadow:0px 0px 10px 10px hsl(230, 85%, 60%);
 }
-.selectHand .inside{
+.inside{
     position: relative;
     display: flex;
     left: 10%;
@@ -101,7 +110,7 @@ main{
     width:80%;
     height: 80%;
 } 
-.selectHand .inside div{
+.inside div{
     margin: auto;
     color: black;
 }
@@ -115,7 +124,7 @@ main{
     background-color:hsl(40, 84%, 53%);
     box-shadow:  inset 0px -7px 0px   hsl(39, 89%, 49%);
 }
-.selectHand .handSciss:hover{
+.handSciss:hover{
     box-shadow:0px 0px 10px 10px  hsla(39, 89%, 49%, 0.89) ;
 }
 .selectHand .handRock{
@@ -146,15 +155,90 @@ main{
     
 }
 /* style display result--------------------------------------------------------------- */
+.result{
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+.result .hands{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-grow: 5;
+}
+.result .hands .but-div{
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    border-radius: 50%;
+    background-color: gray;
+}
+.hands .yourPicked{
+    top: 30%;
+    left: 5%;
+}
+.hands .theHouse{
+    top: 30%;
+    right: 5%;
+}
+.hands p {
+    display: inline-block;
+}
+.result .gameRes{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+.gameRes h1{
+    margin:10px auto;
+    font-size: 3em;
+    font-weight: bolder;
+}
+.gameRes button{
+    margin:0 auto;
+    padding: 20px;
+    color:var(--DarkText);
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    width: 70%;
+}
+/* RULES---------------------------------------------- */
+.rules{
+    display: none;
+    position: absolute;
+    top: 0%;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+.rules h1{
+    position: relative;
+    top: 10%;
+    color:  hsl(229, 25%, 31%);
+    text-align: center;
+}
+.rules #rulesImg{
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
 
-
+}
+.rules #close{
+    position: absolute;
+    bottom: 10%;
+    transform: translate(-50%);
+    left: 50%;
+    
+    
+}
 footer{
     flex-basis: 20%;
 }
 
-.result{
-    display:flex;
-}
+
 .selectHand{
     display: none;
 }
