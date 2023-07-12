@@ -110,9 +110,6 @@ main{
     width:80%;
     height: 80%;
 } 
-.inside:focus{
-    
-}
 .inside div{
     margin: auto;
     color: black;
@@ -159,7 +156,7 @@ main{
 }
 /* style display result--------------------------------------------------------------- */
 .result{
-   display: flex;
+   display: none;
    flex-direction: column;
    height: 100%;
 }
@@ -265,5 +262,5 @@ footer{
 
 
 .selectHand{
-    display: none;
+    display: block;
 }
