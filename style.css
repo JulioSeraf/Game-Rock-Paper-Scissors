@@ -154,6 +154,16 @@ main{
     border: 3px solid hsl(217, 16%, 45%);
     
 }
+/* contagem---------------------------------------------------------- */
+.contagen{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 5em;
+    text-align: center;
+    transition: .8s all;
+    color:hsl(230, 89%, 65%);
+}
 /* style display result--------------------------------------------------------------- */
 .result{
    display: none;
@@ -256,6 +266,7 @@ main{
 footer{
     flex-basis: 20%;
 }
+
 
 
 .selectHand{

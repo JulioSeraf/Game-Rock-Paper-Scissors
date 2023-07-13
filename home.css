@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+   background-color:hsl(214, 47%, 23%) ;
+}
+header{
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+header h1{
+    margin: 10px 0;
+}
+.games{
+    display:flex;
+    width: 100%;
+}
+.games div{
+    border: 1px solid white;
+    position: absolute;
+    width: 50%;
+}
+div img{
+  width: 100%;
+}
+#janken:active{
+    left: 50%;
+    transform: translate(-50%);
+}
+#jajanken{
+    right: 0%;
+    bottom: 0%;
+   
+}
+#jajanken:hover{
+    left:0%;
+}
+#logo1{
+    right:0%;
+    top: 25%;
+    width: 50%;
+    border: none;
+}
+#logo2{
+    bottom: 0%;
+    left: 2%;
+    width: 45%;
+    border: none;
+}
+button{
+    position: absolute;
+    font-size: 1.5em;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    border:1px solid white;
+    z-index: 1;
+}
+#jan{
+    top: 40%;
+    left: 10%;
+}
+#jajan{
+    bottom: 20%;
+    right: 8%;
+}

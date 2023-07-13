@@ -2,10 +2,12 @@ const hands = document.querySelectorAll('.inside');
 const yourPicked = document.querySelector('.yourPicked');
 const closerBut = document.getElementById('close-but');
 const rules = document.querySelector('.rules');
+const homebut = document.getElementById('homebut');
 const handsDis = document.querySelector('.selectHand');
 const resultDis = document.querySelector('.result');
 const handHouse = document.querySelector('.theHouse');
 const resNumber = document.querySelector('.numberResult');
+const jaken = document.querySelector('.contagen');
 let puntos = 0;
 const paper = {
     img: `<img src="images/icon-paper.svg" alt="icon-paper">`,
@@ -21,18 +23,30 @@ const sciss = {
     color: ` background-color:hsl(40, 84%, 53%);
     box-shadow:  inset 0px -7px 0px  hsl(39, 89%, 49%);`
 };
+const jajaken =[{
+    nu:1,
+    jkp: 'JAN'
+},{
+    nu:2,
+    jkp: 'KEN'
+},{
+    nu:3,
+    jkp:'PO'
+}]
 function selectHand(chose){
-    resDisplay();
     yourPicked.classList.remove('but-div');
     yourPicked.classList.add('but-select'); 
     let imgHand = null;
     if(chose === 'paper'){
+        jaken.style.color = 'hsl(230, 89%, 65%)';
         imgHand = paper.img;
         yourPicked.style.cssText = paper.color;
     }else if(chose === 'rock'){
+        jaken.style.color = ' hsl(349, 70%, 56%)';
         imgHand = rock.img;
         yourPicked.style.cssText = rock.color;
     }else if(chose === 'sciss'){
+        jaken.style.color = 'hsl(40, 84%, 53%)';
         imgHand = sciss.img;
         yourPicked.style.cssText = sciss.color;
     }
@@ -56,60 +70,92 @@ function houseSelect(nuRandom){
     }
    handHouse.innerHTML = `<div class="insideRes">${imgHand}
   </div>`;
-}
-// button Rules-----------------------------------------------------------
+};
+
+function resltHands(hand,nuRandom){
+    let resultado = document.querySelector('.res');
+    if(hand.id === 'paper' && nuRandom === 1){
+        puntos ++;
+        resultado.innerHTML = 'YOU WIN!';
+    }else if(hand.id === 'paper' && nuRandom === 2){
+        if( puntos > 0){
+            puntos--;
+        }else{
+            puntos = 0;
+        }
+        resultado.innerHTML = 'YOU LOSE';
+    }else if(hand.id === 'rock' && nuRandom === 2){
+        puntos++;
+        resultado.innerHTML = 'YOU WIN!';
+    }else if(hand.id === 'rock' && nuRandom === 0){
+        if( puntos > 0){
+            puntos--;
+        }else{
+            puntos = 0;
+        }
+        resultado.innerHTML = 'YOU LOSE';
+    }else if(hand.id === 'sciss' && nuRandom === 0 ){
+        puntos ++;
+        resultado.innerHTML = 'YOU WIN!';
+    }else if(hand.id === 'sciss' && nuRandom === 1){
+        if( puntos > 0){
+            puntos--;
+        }else{
+            puntos = 0;
+        }
+        resultado.innerHTML = 'YOU LOSE';
+    }else if(hand.id === ''){
+
+    }else if((hand.id === 'paper' && nuRandom === 0)||(hand.id === 'rock' && nuRandom === 1) || (hand.id === 'sciss' && nuRandom === 2)){
+        resultado.innerHTML = 'DRAW';
+    }
+    resNumber.innerHTML = puntos;
+};
+
+// button Rules / home-----------------------------------------------------------
+
 document.getElementById('rulesbut').addEventListener('click',()=>{
     rules.style.display = 'block';
     closerBut.addEventListener('click',()=>{
         rules.style.display = 'none';
     });
 });
-const resDisplay = ()=>{
-    setTimeout(()=>{
-    resultDis.style.display = 'flex';
-    handsDis.style.display = 'none';}, 100);
-    clearTimeout();
-};
 
 // Play Again---------------------------------------------------------
-
+homebut.addEventListener('click', ()=>{
+    location.href = 'home.html';
+})
 document.getElementById('butAgain').addEventListener('click',()=>{
     handsDis.style.display = 'block';
     resultDis.style.display = 'none';
-})
+    jaken.style.display = 'none';
+});
 hands.forEach((hand)=>{
     hand.addEventListener('click', ()=>{
         let nuRandom = Math.trunc(Math.random()*3);
         houseSelect(nuRandom);
         selectHand(hand.id);
-        if(hand.id === 'paper' && nuRandom === 1){
-            puntos ++;
-        }else if(hand.id === 'paper' && nuRandom === 2){
-            if( puntos > 0){
-                puntos--;
-            }else{
-                puntos = 0;
+        handsDis.style.display = 'none';
+        jaken.style.display = 'block';
+        jaken.innerHTML = '';
+        let c = 0;
+        const time = setInterval(()=>{
+            jaken.innerHTML = `<h1>${jajaken[c].nu}</h1>
+            <p>${jajaken[c].jkp}</p>`;
+            console.log(c)
+            if( c >= 2){ 
+                clearInterval(time);
+                jaken.style.cssText = 'color:transparent; position:absolute;';
+                resultDis.style.display = 'flex';
+                resltHands(hand,nuRandom);
             }
-        }else if(hand.id === 'rock' && nuRandom === 2){
-            puntos++;
-        }else if(hand.id === 'rock' && nuRandom === 0){
-            if( puntos > 0){
-                puntos--;
-            }else{
-                puntos = 0;
-            }
-        }else if(hand.id === 'sciss' && nuRandom === 0 ){
-            puntos ++;
-        }else if(hand.id === 'sciss' && nuRandom === 1){
-            if( puntos > 0){
-                puntos--;
-            }else{
-                puntos = 0;
-            }
-        }
-        resNumber.innerHTML = puntos;
+            c++;
+        },1000); 
     });
 });
-
+// Home select Game-----------------------------------------
+document.getElementById('jan').addEventListener('click',()=>{
+    location.href = 'index.html';
+})
 
 
