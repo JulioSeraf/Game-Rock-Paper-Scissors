@@ -263,6 +263,33 @@ main{
     
     
 }
+.msgExit{
+    display: none;
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40%;
+    color: black;
+    width: 90%;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 30px 10px;
+    font-weight: bolder;
+    z-index: 5;
+}
+.msgExit button{
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.msgExit button:active{
+    width: 53%;
+    transition: .05s;
+    background-color: rgba(173, 216, 230, 0.61);
+}
 footer{
     flex-basis: 20%;
 }

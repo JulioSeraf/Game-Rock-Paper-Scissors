@@ -32,7 +32,7 @@ const jajaken =[{
 },{
     nu:3,
     jkp:'PO'
-}]
+}];
 function selectHand(chose){
     yourPicked.classList.remove('but-div');
     yourPicked.classList.add('but-select'); 
@@ -123,8 +123,20 @@ document.getElementById('rulesbut').addEventListener('click',()=>{
 
 // Play Again---------------------------------------------------------
 homebut.addEventListener('click', ()=>{
-    location.href = 'home.html';
-})
+    let exit = document.querySelector('.msgExit');
+    exit.style.display = 'block';
+    document.querySelectorAll('.butExit').forEach((item)=>{
+        item.addEventListener('click', ()=>{
+            if(item.id === 'yesExit'){
+                puntos = 0;
+                exit.style.display = 'none';
+                location.href = 'home.html';
+            }else if(item.id === 'noExit'){
+                exit.style.display = 'none';
+            };
+        });
+    });
+});
 document.getElementById('butAgain').addEventListener('click',()=>{
     handsDis.style.display = 'block';
     resultDis.style.display = 'none';
@@ -153,9 +165,5 @@ hands.forEach((hand)=>{
         },1000); 
     });
 });
-// Home select Game-----------------------------------------
-document.getElementById('jan').addEventListener('click',()=>{
-    location.href = 'index.html';
-})
-
+// Home select Game----------------------------------------
 
