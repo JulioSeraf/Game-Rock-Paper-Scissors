@@ -16,4 +16,7 @@ gameJajanken.addEventListener('click',()=>{
     gameJajanken.className = 'selectGame';
     playGame[0].style.display = 'none';
     playGame[1].style.display = 'block';
+    playGame[1].addEventListener('click',()=>{
+        location.href = 'jajanken.html';
+    })
 });
