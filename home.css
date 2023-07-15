@@ -23,7 +23,7 @@ header h1{
     width: 100%;
 }
 .games div{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     position: absolute;
     width: 50%;
 }
@@ -36,12 +36,14 @@ div img{
    
 }
 .selectGame{
-    top: 1%;
-    width:99%;
-    z-index:2;
+    border-style:solid;
+    border-width: 5px;
+   border-image: linear-gradient(45deg,  hsl(349, 71%, 52%) , hsl(261, 73%, 60%), hsl(189, 59%, 53%) )1;
+   z-index: 2;
 }
 .selectGame > button{
     position: absolute;
+    bottom: 7%;
     padding: 15px;
     width: 40%;
     z-index: 3;
@@ -49,11 +51,8 @@ div img{
     transform: translate(-50%);
     left: 50%;
 }
-.selectGame > .playGame{
-    bottom: 7%;
-}
-.selectGame > .closeGame{
-   bottom: 15%;
+.playGame{
+    display: none;
 }
 #logo1{
     right:0%;
