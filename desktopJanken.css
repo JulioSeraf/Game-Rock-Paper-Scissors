@@ -1,0 +1,14 @@
+@media screen and (min-width: 500px){
+    .gameRes{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 50%;
+    }
+    .result .hands{
+        display: flex;
+        justify-content: space-between;
+        width: clamp();
+    }
+
+}

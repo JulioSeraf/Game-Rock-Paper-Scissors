@@ -26,7 +26,6 @@
 
 --RadialGradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
 }
-
 body{
     background-color:hsl(214, 47%, 23%) ;
     height: 100vh;
@@ -74,7 +73,7 @@ main{
 }
 .selectHand #triangle{
     position: absolute;
-    width: 200px;
+    width: clamp(100px, 50%, 200px);
     left: 50%;
     transform: translate(-50%);
     top: 33%;
@@ -82,20 +81,21 @@ main{
 }
 .selectHand{
     position: relative;
-    width: 100%;
+    width: clamp(350px,100%,500px);
     height: 100%;
+    margin: auto;
 }
 .selectHand .but-div{
     position: absolute;
-    width: 40%;
-    height: 35%;
+    width: 150px;
+    height: 140px;
     border-radius: 50%;
     background-color:hsl(230, 89%, 65%);
     box-shadow:  inset 0px -7px 0px hsl(230, 85%, 60%);
 }
 .selectHand .but-div:hover{
-    width: 42%;
-    height: 37%;
+    width: 160px;
+    height: 150px;
     cursor: pointer;
     box-shadow:0px 0px 10px 10px hsl(230, 85%, 60%);
 }
@@ -166,13 +166,14 @@ main{
 }
 /* style display result--------------------------------------------------------------- */
 .result{
-   display: none;
+   display: block;
    flex-direction: column;
    height: 100%;
 }
 .result .hands{
     display: flex;
-    width: 100%;
+    width: clamp(350px,100%,500px);
+    margin: auto;
     flex-grow: 5;
 }
 .result .hands> div{
@@ -291,11 +292,13 @@ main{
     background-color: rgba(173, 216, 230, 0.61);
 }
 footer{
+    text-align: center;
+    font-size: 0.8em;
     flex-basis: 20%;
 }
 
 
 
 .selectHand{
-    display: block;
+    display: none;
 }

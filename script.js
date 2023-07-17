@@ -141,6 +141,7 @@ document.getElementById('butAgain').addEventListener('click',()=>{
     handsDis.style.display = 'block';
     resultDis.style.display = 'none';
     jaken.style.display = 'none';
+    jaken.style.fontSize = '5em'
 });
 hands.forEach((hand)=>{
     hand.addEventListener('click', ()=>{
@@ -157,7 +158,7 @@ hands.forEach((hand)=>{
             console.log(c)
             if( c >= 2){ 
                 clearInterval(time);
-                jaken.style.cssText = 'color:transparent; position:absolute;';
+                jaken.style.cssText = 'color:transparent; position:absolute; font-size:0.1px;';
                 resultDis.style.display = 'flex';
                 resltHands(hand,nuRandom);
             }
