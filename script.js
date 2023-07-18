@@ -167,4 +167,9 @@ hands.forEach((hand)=>{
     });
 });
 // Home select Game----------------------------------------
-
+function janken(){
+    location.href = 'index.html'
+}
+function jajanken(){
+    location.href = 'jajanken.html'
+}

@@ -5,69 +5,45 @@
 body{
     display: flex;
     flex-direction: column;
-   background-color:hsl(214, 47%, 23%) ;
+    background-color:hsl(214, 47%, 23%) ;
 }
 header{
     text-align: center;
     color: white;
     padding: 20px 0;
+    flex-basis: 10vh;
 }
 header h1{
     margin: 10px 0;
     font-weight: bolder;
-    text-shadow: 5px 5px 10px white;
     transition: .5s;
 }
-.games{
-    display:grid;
-    width: 100%;
-    grid-template-columns: 50% 50%;
-    border:1px solid white;
-    height: 80vh;
+main{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70vh;
 }
-.games div{
-    position: relative;
-    /* border: 1px solid white; */
-    border: 1px solid white;
-}
-div img{
-    position:absolute;
-    width: 100%;
-    bottom: 0%;
-}
-#jajanken{
-    right: 0%;
-    bottom: 0%;
-   
-}
-.selectGame{
+.but-display{
+    font-size: 3em;
+    font-weight: bolder;
+    padding: 5px;
+    width: 90%;
+    height: 100px;
+    margin: auto;
     border-style:solid;
     border-width: 5px;
-   border-image: linear-gradient(45deg,  hsl(349, 71%, 52%) , hsl(261, 73%, 60%), hsl(189, 59%, 53%) )1;
-   z-index: 2;
+    border-image: linear-gradient(45deg,  hsl(349, 71%, 52%) , hsl(261, 73%, 60%), hsl(189, 59%, 53%) )1;
+    z-index: 2;
 }
-.selectGame > button{
-    position: absolute;
-    bottom: 7%;
-    padding: 15px;
-    width: 40%;
-    z-index: 3;
-    border-radius: 10PX;
-    transform: translate(-50%);
-    left: 50%;
+footer div{
+    text-align: center;
+    font-size: 0.7em;
+    color: white;
 }
-.playGame{
-    display: none;
+footer div a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
 }
-/* #logo1{
-    right:0%;
-    top: 25%;
-    width: 50%;
-    border: none;
-}
-#logo2{
-    bottom: 0%;
-    left: 2%;
-    width: 45%;
-    border: none;
-} */
+
+

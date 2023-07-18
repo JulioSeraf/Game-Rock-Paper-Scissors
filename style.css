@@ -166,7 +166,7 @@ main{
 }
 /* style display result--------------------------------------------------------------- */
 .result{
-   display: block;
+   display: none;
    flex-direction: column;
    height: 100%;
 }
@@ -300,5 +300,5 @@ footer{
 
 
 .selectHand{
-    display: none;
+    display: block;
 }
