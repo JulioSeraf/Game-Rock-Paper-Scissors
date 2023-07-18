@@ -19,16 +19,21 @@ header h1{
     transition: .5s;
 }
 .games{
-    display:flex;
+    display:grid;
     width: 100%;
+    grid-template-columns: 50% 50%;
+    border:1px solid white;
+    height: 80vh;
 }
 .games div{
+    position: relative;
     /* border: 1px solid white; */
-    position: absolute;
-    width: 50%;
+    border: 1px solid white;
 }
 div img{
-  width: 100%;
+    position:absolute;
+    width: 100%;
+    bottom: 0%;
 }
 #jajanken{
     right: 0%;
@@ -54,7 +59,7 @@ div img{
 .playGame{
     display: none;
 }
-#logo1{
+/* #logo1{
     right:0%;
     top: 25%;
     width: 50%;
@@ -65,4 +70,4 @@ div img{
     left: 2%;
     width: 45%;
     border: none;
-}
+} */
