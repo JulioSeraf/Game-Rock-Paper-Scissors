@@ -1,0 +1,76 @@
+.jajankenGame{
+    position: relative;
+    height: 100%;
+    width: clamp(350px,100%,500px);
+}
+.jajankenGame .but-div{
+    position: absolute;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+.but-div:hover{
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+    box-shadow:0px 0px 10px 10px hsl(230, 85%, 60%);
+}
+.inside{
+    position: relative;
+    display: flex;
+    left: 10%;
+    top: 10%;
+    box-shadow: inset 0px 5px 2px rgba(0, 0, 0, 0.167);
+    border-radius: 50%;
+    background-color: white;
+    width:80%;
+    height: 80%;
+} 
+
+.inside div{
+    display: flex;
+    margin: auto;
+}
+.inside div img{
+    width: 75%;
+    margin: auto;
+
+}
+#pentagonImg{
+    position: absolute;
+    width: clamp(100px, 65%, 300px);
+    left: 50%;
+    transform: translate(-50%);
+    top: 33%;
+}
+.handPaper{
+  top: 53%;
+  right: 15%;
+  background-color:hsl(230, 89%, 65%);
+  box-shadow:  inset 0px -7px 0pxhsl(230, 89%, 62%) ;
+}
+.handSciss{
+    top: 7%;
+    left:50%;
+    transform: translate(-50%);
+    background-color:hsl(40, 84%, 53%);
+    box-shadow:  inset 0px -7px 0px hsl(39, 89%, 49%);
+}
+.handRock{
+    right: 5%;
+    top: 25%;
+    background-color:  hsl(349, 70%, 56%);
+    box-shadow:  inset 0px -7px 0px  hsl(349, 71%, 52%);
+}
+.handSpock{
+    top: 25%;
+    left:5%;
+    background-color: hsl(189, 58%, 57%);
+    box-shadow:  inset 0px -7px 0px hsl(189, 59%, 53%);
+}
+.handLizard{
+    top: 53%;
+    left: 15%;
+    background-color:  hsl(261, 72%, 63%);
+    box-shadow:  inset 0px -7px 0px hsl(261, 73%, 60%);
+}
