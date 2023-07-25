@@ -1,18 +1,11 @@
 const hands = document.querySelectorAll('.inside');
+const jajankenDis = document.querySelector('.jajankenGame');
 hands.forEach((hand)=>{
     hand.addEventListener('click',()=>{
-        let homeHand = Math.random();
-        console.log(homeHand)
-        switch(hand.id){
-            case 'rock':
-    
-            break;
-            case 'paper':
-
-            break;
-            case 'scinss':
-
-            break;
-        }
+        let homeHand = Math.trunc(Math.random()*3);
+        selectHand(hand.id);
+        houseSelect(homeHand);
+        jajankenDis.style.display = 'none';
+        
     })
 })

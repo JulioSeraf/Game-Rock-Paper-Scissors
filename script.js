@@ -23,6 +23,16 @@ const sciss = {
     color: ` background-color:hsl(40, 84%, 53%);
     box-shadow:  inset 0px -7px 0px  hsl(39, 89%, 49%);`
 };
+const lizard = {
+    img: `<img src="images/icon-lizard.svg" alt="icon-lizard">`,
+    color:` background-color:  hsl(261, 72%, 63%);
+    box-shadow:  inset 0px -7px 0px hsl(261, 73%, 60%);`
+};
+const spock = {
+    img:`<img src="images/icon-spock.svg" alt="icon-spock">`,
+    color: `background-color: hsl(189, 58%, 57%);
+    box-shadow:  inset 0px -7px 0px hsl(189, 59%, 53%);`
+}
 const jajaken =[{
     nu:1,
     jkp: 'JAN'
@@ -151,6 +161,7 @@ hands.forEach((hand)=>{
         handsDis.style.display = 'none';
         jaken.style.display = 'block';
         jaken.innerHTML = '';
+        // contador jan ken po----------------------------------------------
         let c = 0;
         const time = setInterval(()=>{
             jaken.innerHTML = `<h1>${jajaken[c].nu}</h1>
