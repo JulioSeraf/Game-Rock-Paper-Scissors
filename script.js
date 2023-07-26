@@ -1,9 +1,10 @@
 const hands = document.querySelectorAll('.inside');
+const jajankenDis = document.querySelector('.jajankenGame');
+const handsDis = document.querySelector('.selectHand');
 const yourPicked = document.querySelector('.yourPicked');
 const closerBut = document.getElementById('close-but');
 const rules = document.querySelector('.rules');
 const homebut = document.getElementById('homebut');
-const handsDis = document.querySelector('.selectHand');
 const resultDis = document.querySelector('.result');
 const handHouse = document.querySelector('.theHouse');
 const resNumber = document.querySelector('.numberResult');
@@ -148,17 +149,26 @@ homebut.addEventListener('click', ()=>{
     });
 });
 document.getElementById('butAgain').addEventListener('click',()=>{
-    handsDis.style.display = 'block';
+    if(location.href.includes('index')){
+        handsDis.style.display = 'block';
+    }else if(location.href.includes('jajanken.html')){
+       jajankenDis.style.display = 'block';
+    };
     resultDis.style.display = 'none';
     jaken.style.display = 'none';
     jaken.style.fontSize = '5em'
 });
 hands.forEach((hand)=>{
     hand.addEventListener('click', ()=>{
-        let nuRandom = Math.trunc(Math.random()*3);
+        let nuRandom = Math.trunc(Math.random()*5);
         houseSelect(nuRandom);
         selectHand(hand.id);
-        handsDis.style.display = 'none';
+        if(location.href.includes('index')){
+            console.log('ok')
+            handsDis.style.display = 'none';
+        }else if(location.href.includes('jajanken.html')){
+           jajankenDis.style.display = 'none';
+        };
         jaken.style.display = 'block';
         jaken.innerHTML = '';
         // contador jan ken po----------------------------------------------
@@ -177,10 +187,19 @@ hands.forEach((hand)=>{
         },1000); 
     });
 });
+
+// function jajankeGame(myHand,houseHand){
+//   selectHand(myHand);
+//   houseSelect(houseHand); 
+//   jajankenDis.style.display = 'none';
+// };
+
 // Home select Game----------------------------------------
 function janken(){
     location.href = 'index.html'
+    
 }
 function jajanken(){
     location.href = 'jajanken.html'
+    
 }
